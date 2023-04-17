@@ -13,8 +13,23 @@ stop:
 	docker-compose stop
 
 clean:
-	docker-compose down --rmi all -v --remove-orphans
+	docker system prune -a
 
-rebuild: stop clean build up
+rebuild: 
+	docker-compose up -d --remove-orphans --no-deps --build mt-kaili
 
 .PHONY: build up restart stop clean rebuild
+
+download_model:
+	sudo python3 download_model.py
+
+setup_cache:
+	sudo python3 setup_cache_indobenchmark.py
+
+setup_init: download_model setup_cache
+
+install:
+	sudo pip3 install -r requirements.txt
+
+start:
+	nohup sudo streamlit run app.py --server.port 8501 &

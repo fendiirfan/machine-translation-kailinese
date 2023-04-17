@@ -1,0 +1,90 @@
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.15) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Usage: streamlit run [OPTIONS] TARGET [ARGS]...
+Try "streamlit run --help" for help.
+
+Error: no such option: -p
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.15) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://10.83.164.52:8501
+  External URL: http://103.67.186.196:8501
+
+/home/fendi_amorokhman/machine-trainslation-kaili/utils/metrics.py:7: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  bleu = datasets.load_metric('bleu')
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:01<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.78s/it]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.88s/it]
+2023-04-16 13:11:09.448 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:00<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.02it/s]
+2023-04-16 13:15:42.321 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:00<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  2.24it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.74it/s]
+2023-04-16 13:20:41.511 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:00<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  2.08it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.63it/s]
+2023-04-16 13:20:56.687 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:04<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:04<00:00,  4.28s/it]TESTING... : 100%|██████████| 1/1 [00:04<00:00,  4.42s/it]
+2023-04-16 13:22:25.444 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:03<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:03<00:00,  3.62s/it]TESTING... : 100%|██████████| 1/1 [00:03<00:00,  3.73s/it]
+2023-04-16 13:25:27.028 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:06<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:06<00:00,  6.09s/it]TESTING... : 100%|██████████| 1/1 [00:06<00:00,  6.23s/it]
+2023-04-16 13:47:40.524 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:08<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:08<00:00,  8.37s/it]TESTING... : 100%|██████████| 1/1 [00:08<00:00,  8.56s/it]
+2023-04-16 13:52:37.934 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:07<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:07<00:00,  7.02s/it]TESTING... : 100%|██████████| 1/1 [00:07<00:00,  7.22s/it]
+2023-04-16 13:52:49.460 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:00<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.45it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.15it/s]
+2023-04-16 14:32:28.788 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:01<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.54s/it]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.76s/it]
+2023-04-16 14:43:18.749 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:00<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:00<00:00,  1.10it/s]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.18s/it]
+2023-04-16 15:16:33.914 Using default tokenizer.
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.15) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://10.83.164.52:8501
+  External URL: http://103.67.186.196:8501
+
+/home/fendi_amorokhman/machine-trainslation-kaili/utils/metrics.py:7: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  bleu = datasets.load_metric('bleu')
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]TESTING... :   0%|          | 0/1 [00:01<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.34s/it]TESTING... : 100%|██████████| 1/1 [00:01<00:00,  1.44s/it]
+2023-04-17 03:16:15.606 Using default tokenizer.
+/usr/local/lib/python3.9/dist-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+  0%|          | 0/1 [00:00<?, ?it/s]/usr/local/lib/python3.9/dist-packages/transformers/generation/utils.py:1219: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation)
+  warnings.warn(
+TESTING... :   0%|          | 0/1 [00:07<?, ?it/s]TESTING... : 100%|██████████| 1/1 [00:07<00:00,  7.51s/it]TESTING... : 100%|██████████| 1/1 [00:07<00:00,  7.62s/it]
+2023-04-17 03:17:24.671 Using default tokenizer.

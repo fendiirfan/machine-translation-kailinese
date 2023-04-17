@@ -1,15 +1,15 @@
 import streamlit as st
-from utils.translator import Translator
+from utils.translator import Predict
 
-user_input = st.text_input('Input indonesian sentence')
+user_input = st.text_input('Input sentence')
 option = st.selectbox(
     'How would you language translate from?',
     ('Indonesian', 'Kailinese'))
-button = st.button('Send')
+button = st.button('Tranlsate')
 
 if button==True: # submit text input
     with st.spinner('Translating...'):
-      st.markdown("ChatBot Response : \n")
-      obj = Translator(user_input)
-      st.write(obj.preprocessing())
+      st.markdown("Translate Result : \n")
+      obj = Predict(user_input)
+    #   st.write(obj.preprocessing())
       st.write(obj.translate())
