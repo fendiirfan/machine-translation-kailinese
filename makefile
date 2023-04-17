@@ -26,10 +26,10 @@ download_model:
 setup_cache:
 	sudo python3 setup_cache_indobenchmark.py
 
-setup_init: download_model setup_cache
-
 install:
 	sudo pip3 install -r requirements.txt
+
+setup_init: download_model setup_cache
 
 start:
 	nohup sudo streamlit run app.py --server.port 8501 &

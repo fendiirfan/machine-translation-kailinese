@@ -52,9 +52,7 @@ class Predict:
         return cleaned_text
 
     def load_model(self):
-        # model = torch.load(self.model_dir, map_location=torch.device('cpu'))
-        # model = AutoModelForSeq2SeqLM.from_pretrained('/home/fendi_amorokhman/machine-trainslation-kaili/model_result')
-        with open('/home/fendi_amorokhman/machine-trainslation-kaili/model_result/model.pickle', 'rb') as handle:
+        with open('model_result/model.pickle', 'rb') as handle:
             model = pickle.load(handle)
         return model
 
