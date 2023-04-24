@@ -12,9 +12,9 @@ def contribute_page():
 
     indonesian, kailinese = st.columns(2)
     with indonesian:
-        indonesian_contribute_input = str(st.text_area('Input Indonesian sentence', height=170, key='indonesian_contribute'))
+        indonesian_contribute_input = str(st.text_area('Input Indonesian sentence', height=140, key='indonesian_contribute'))
     with kailinese:
-        kailinese_contribute_input = str(st.text_area('Input Kailinese sentence', height=170, key='kailinese_contribute'))
+        kailinese_contribute_input = str(st.text_area('Input Kailinese sentence', height=140, key='kailinese_contribute'))
     
     button = st.button('Send Contribute')
     if button == True:

@@ -22,7 +22,7 @@ def translate_page():
     indonesian, kailinese = st.columns(2)
 
     with indonesian:
-        user_input = st.text_area(lang_src, height=170)
+        user_input = st.text_area(lang_src, height=140)
     
     translation_schema = st.selectbox(
     'Choose a translation schema',
@@ -51,4 +51,4 @@ def translate_page():
         with st.spinner('Translating...'):
             indonesian_result = translate_send_request(user_input,lang_src)
             with kailinese:
-                st.text_area(lang_dist, value=indonesian_result, height=170)
+                st.text_area(lang_dist, value=indonesian_result, height=140)
