@@ -37,3 +37,10 @@ start:
 stop:
 	sudo pkill -f "streamlit run app.py --server.port 8501"
 	sudo pkill -f "uvicorn main:app --port 8186"
+
+make gitpush:
+	sudo mv /home/fendiirfan/machine-trainslation-kaili/model_result /home/fendiirfan
+	sudo git add .
+	sudo git commit -m "updating"
+	sudo git push
+	sudo mv /home/fendiirfan/model_result /home/fendiirfan/machine-trainslation-kaili
