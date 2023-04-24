@@ -24,12 +24,12 @@ class Predict:
 
         if lang_src=='Indonesian':
             self.swap_source_target = True
-            self.model_dir = self.base_dir+'model_result/indo_ke_kaili'
-            self.tokenizer_dir = self.base_dir+'model_result/indo_ke_kaili/tokenizer.pickle'
+            self.model_dir = self.base_dir+'model/indo_ke_kaili'
+            self.tokenizer_dir = self.base_dir+'model/indo_ke_kaili/tokenizer.pickle'
         elif lang_src=='Kailinese':
             self.swap_source_target = False
-            self.model_dir = self.base_dir+'model_result/kaili_ke_indo'
-            self.tokenizer_dir = self.base_dir+'model_result/kaili_ke_indo/tokenizer.pickle'
+            self.model_dir = self.base_dir+'model/kaili_ke_indo'
+            self.tokenizer_dir = self.base_dir+'model/kaili_ke_indo/tokenizer.pickle'
 
     def preprocessing(self):
         kamus_alay1 = pd.read_csv(self.kamus_alay1_dir)
@@ -65,7 +65,7 @@ class Predict:
     
     
     def load_model(self):
-        model = AutoModelForSeq2SeqLM.from_pretrained(dir)
+        model = AutoModelForSeq2SeqLM.from_pretrained(self.model_dir)
         return model
 
     def load_tokenizer(self):
@@ -120,6 +120,5 @@ class Predict:
                                                             device='cpu')
             
             
-            return test_hyp[0]
-        
+            return test_hyp[0]        
 

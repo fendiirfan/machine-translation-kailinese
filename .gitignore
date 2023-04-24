@@ -1,4 +1,5 @@
 .streamlit
+model
 .user_input
 makefile
 __pycache__

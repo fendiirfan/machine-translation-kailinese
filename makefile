@@ -39,8 +39,8 @@ stop:
 	sudo pkill -f "uvicorn main:app --port 8186"
 
 make gitpush:
-	sudo mv /home/fendiirfan/machine-trainslation-kaili/model_result /home/fendiirfan
+	sudo mv /home/fendiirfan/machine-trainslation-kaili/model /home/fendiirfan
 	sudo git add .
 	sudo git commit -m "updating"
 	sudo git push
-	sudo mv /home/fendiirfan/model_result /home/fendiirfan/machine-trainslation-kaili
+	sudo mv /home/fendiirfan/model /home/fendiirfan/machine-trainslation-kaili
