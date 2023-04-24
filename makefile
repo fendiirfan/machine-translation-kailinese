@@ -32,4 +32,8 @@ install:
 setup_init: download_model setup_cache
 
 start:
-	nohup sudo streamlit run app.py --server.port 8501 &
+	sudo nohup sudo streamlit run app.py --server.port 8501 &
+	sudo nohup uvicorn main:app --port 8186 --reload &
+stop:
+	sudo pkill -f "streamlit run app.py --server.port 8501"
+	sudo pkill -f "uvicorn main:app --port 8186"

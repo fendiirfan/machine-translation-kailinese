@@ -1,0 +1,17 @@
+name: cd
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - name: Update VM
+    run: |
+        echo "================== STARTING UPDATE =================="
+        cd ~/machine-trainslation-kaili/
+        git pull origin master
+        echo "================== FINISH =================="

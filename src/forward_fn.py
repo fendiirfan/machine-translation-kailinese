@@ -171,27 +171,15 @@ def forward_generation(model, batch_data, tokenizer, model_type, is_inference=Fa
     # Forward model   
     if model_type == 'indo-gpt2':
         # GPT2 should go here
-        if not is_inference:
-            outputs = model(input_ids=dec_batch, attention_mask=dec_mask_batch, token_type_ids=token_type_batch, labels=label_batch)
-            loss, logits = outputs[:2]
-            hyps = logits.topk(1, dim=-1)[1]
-        else:
-            loss = 0
-            hyps = model.generate(input_ids=enc_batch, attention_mask=enc_mask_batch, num_beams=beam_size if is_test else 1, 
+        hyps = model.generate(input_ids=enc_batch, attention_mask=enc_mask_batch, num_beams=beam_size if is_test else 1, 
                                     max_length=max_seq_len * 2, early_stopping=True, length_penalty=length_penalty, 
                                     repetition_penalty=repetition_penalty, top_p=top_p, top_k=top_k, do_sample=do_sample,
                                     use_cache=True, pad_token_id=tokenizer.pad_token_id, eos_token_id=tokenizer.eos_token_id)
-            hyps = hyps[:, enc_batch.shape[1]:] # Remove prefix
+        hyps = hyps[:, enc_batch.shape[1]:] # Remove prefix
     else: # model_type == 't5' or model_type == 'bart' or model_type == 'baseline-mt5' or model_type == 'baseline-mbart' 
         # BART and T5 should go here!!
-        if not is_inference:
-            outputs = model(input_ids=enc_batch, attention_mask=enc_mask_batch, decoder_input_ids=dec_batch, 
-                    decoder_attention_mask=dec_mask_batch, labels=label_batch)
-            loss, logits = outputs[:2]
-            hyps = logits.topk(1, dim=-1)[1]
-        else:
-            loss = 0
-            hyps = model.generate(input_ids=enc_batch, attention_mask=enc_mask_batch, num_beams=beam_size if is_test else 1, 
+
+        hyps = model.generate(input_ids=enc_batch, attention_mask=enc_mask_batch, num_beams=beam_size if is_test else 1, 
                                     max_length=max_seq_len, early_stopping=True, length_penalty=length_penalty, use_cache=True,
                                     pad_token_id=tokenizer.pad_token_id, eos_token_id=tokenizer.eos_token_id)
     # generate prediction & label list
@@ -205,4 +193,4 @@ def forward_generation(model, batch_data, tokenizer, model_type, is_inference=Fa
         list_hyp.append(tokenizer.decode(hyp, skip_special_tokens=skip_special_tokens))
         list_label.append(tokenizer.decode(label[label != -100], skip_special_tokens=skip_special_tokens))
         
-    return loss, list_hyp, list_label
+    return list_hyp, list_label

@@ -1,15 +1,24 @@
 import streamlit as st
-from utils.translator import Predict
+from templates.contribute_page import contribute_page
+from templates.translate_page import translate_page
 
-user_input = st.text_input('Input sentence')
-option = st.selectbox(
-    'How would you language translate from?',
-    ('Indonesian', 'Kailinese'))
-button = st.button('Tranlsate')
+st.set_page_config(page_title='Kaili Dev',
+        page_icon=f'{st.secrets["base_dir"]}images/favicon.ico')
 
-if button==True: # submit text input
-    with st.spinner('Translating...'):
-      st.markdown("Translate Result : \n")
-      obj = Predict(user_input)
-    #   st.write(obj.preprocessing())
-      st.write(obj.translate())
+hide_st = """
+<style>
+footer {visibility:hidden;}
+#bui1 ul[role="option"]:last-child {
+    display: none;
+}
+"""
+st.markdown(hide_st,unsafe_allow_html=True)
+
+# Create sidebar menu
+menu = ["Translate", "Contribute"]
+choice = st.sidebar.selectbox("Select a page", menu)
+
+if choice == "Translate":
+    translate_page()
+elif choice == "Contribute":
+    contribute_page()
