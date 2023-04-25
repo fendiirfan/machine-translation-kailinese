@@ -18,5 +18,8 @@ def contribute_page():
     
     button = st.button('Send Contribute')
     if button == True:
-        with st.spinner('Sending to Database...'):
-            st.write(contribute_send_request(indonesian_contribute_input, kailinese_contribute_input))
+        if indonesian_contribute_input=='' or kailinese_contribute_input=='':
+            st.warning('Indonesian sentence or Kailinese sentence input can not be empty', icon="⚠️")
+        else:
+            with st.spinner('Sending to Database...'):
+                st.write(contribute_send_request(indonesian_contribute_input, kailinese_contribute_input))

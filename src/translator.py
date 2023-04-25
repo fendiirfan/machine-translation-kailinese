@@ -20,7 +20,7 @@ class Predict:
         self.model_type = 'indo-bart'
         self.max_seq_len = 512
         self.min_count_word = 3
-        self.max_count_word = 25
+        self.max_count_word = 40
 
         if lang_src=='Indonesian':
             self.swap_source_target = True
@@ -106,7 +106,7 @@ class Predict:
         len_user_input = len(self.text_input.split(' '))
 
         if len_user_input<self.min_count_word:
-            return f'⚠️ Limit the word count to {self.min_count_word} maximum ⚠️'
+            return f'⚠️ Limit the word count to {self.min_count_word} minimum ⚠️'
         elif len_user_input>self.max_count_word:
             return f'⚠️ Limit the word count to {self.max_count_word} maximum ⚠️'
         else:

@@ -2,6 +2,7 @@ streamlit
 absl-py
 sacrebleu
 pandas
+streamlit-toggle-switch
 rouge_score
 torch==2.0.0
 transformers==4.28.1
