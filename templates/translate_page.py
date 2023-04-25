@@ -15,6 +15,7 @@ flag = 0
 
 def callback():
     st.session_state.button_clicked = True
+    
 
 def translate_page():
 
@@ -68,8 +69,8 @@ def translate_page():
                 st.text_area(lang_dist, value=translated_result, height=140)
     
     
-    
-        switch = tog.st_toggle_switch(label="Want to improve the translation results above?", 
+        st.write('Would you like to provide feedback to help improve the translation results above?')
+        switch = tog.st_toggle_switch(label="Turn on This", 
                             key="Key1", 
                             default_value=False, 
                             label_after = False, 
