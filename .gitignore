@@ -1,6 +1,7 @@
 .streamlit
 model
 .user_input
+input/mt-kaili-contribute.csv
 makefile
 __pycache__
 modules/__pycache__
