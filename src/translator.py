@@ -21,7 +21,7 @@ class Predict:
         self.input_id = f'{uuid.uuid4()}'
         self.model_type = 'indo-bart'
         self.max_seq_len = 512
-        self.min_count_word = 3
+        self.min_count_word = 1
         self.max_count_word = 30
         if lang_src=='Indonesian':
             self.swap_source_target = True

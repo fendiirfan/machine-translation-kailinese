@@ -9,7 +9,7 @@ import pytz
 app = FastAPI()
 
 contribute_lock = asyncio.Lock()
-translate_semaphore = asyncio.Lock()
+translate_semaphore = asyncio.Semaphore(2)
 
 @app.post("/translate")
 async def translate(user_input: str, lang_src: str):

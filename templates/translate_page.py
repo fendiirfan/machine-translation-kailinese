@@ -17,6 +17,20 @@ def callback():
     st.session_state.button_clicked = True
     
 
+def validate_input(user_input):
+    min_count_word = 1
+    max_count_word = 30
+
+    len_user_input = len(user_input.split(' '))
+
+    if len_user_input<min_count_word or len(user_input)<min_count_word:
+        return f'⚠️ Limit the word count to {min_count_word} minimum ⚠️'
+    elif len_user_input>max_count_word:
+        return f'⚠️ Limit the word count to {max_count_word} maximum ⚠️'   
+    else:
+        return True
+    
+
 def translate_page():
 
     global lang_src
@@ -63,11 +77,15 @@ def translate_page():
     
     
     if (st.button('Translate', on_click=callback, type='primary') or st.session_state.button_clicked):
-        with st.spinner('Translating...'):
-            translated_result = translate_send_request(user_input,lang_src)
+        result_validate_input = validate_input(user_input)
+        if result_validate_input == True:
+            with st.spinner('Translating...'):
+                translated_result = translate_send_request(user_input,lang_src)
+                with kailinese:
+                    st.text_area(lang_dist, value=translated_result, height=140)
+        else:
             with kailinese:
-                st.text_area(lang_dist, value=translated_result, height=140)
-    
+                st.text_area(lang_dist, value=result_validate_input, height=140)
     
         st.write('Would you like to provide feedback to help improve the translation results above?')
         switch = tog.st_toggle_switch(label="Turn on This", 

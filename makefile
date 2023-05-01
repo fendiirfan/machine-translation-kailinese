@@ -40,7 +40,7 @@ start_fe:
 	sudo nohup sudo streamlit run app.py --server.port 8501 &
 stop:
 	sudo pkill -f "streamlit run app.py --server.port 8501"
-	sudo kill $(sudo lsof -t -i:8186)
+	sudo kill -9 $(sudo lsof -t -i:8186)
 
 restart: stop start
 

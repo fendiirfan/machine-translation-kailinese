@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 from transformers import AutoModelForSeq2SeqLM
 
-user_input = 'yaku ante bereiku naturu ri jimbaran ane hau ri bali.'
+user_input = 'gw Fendi. saya bersekolah di telkom university'
 lang_src = 'Indonesian'
 
 URL_API = st.secrets["URL_API"]
