@@ -1,14 +1,16 @@
 import requests
 import time
 import subprocess
+import streamlit as st
 
 def check_api_status():
     try:
         user_input = ''
+        URL_API = st.secrets['URL_API']
+        lang_src = 'Indonesian'
 
-        response1 = requests.post(f"http://localhost:8186/translate_indonesian?user_input={user_input}", timeout=50)
-        response2 = requests.post(f"http://localhost:8186/translate_kailinese?user_input={user_input}", timeout=50)
-	if response1.status_code == 200 and response2.status_code == 200:
+        response = requests.post(f"{URL_API}/translate?user_input={user_input}&lang_src={lang_src}", timeout=100)
+        if response.status_code == 200:
             print('API is up and running.')
         else:
             print(f'API is down with status code {response.status_code}.')

@@ -12,7 +12,7 @@ import re
 
 
 class Predict:
-    def __init__(self, text_input):
+    def __init__(self, text_input, lang_src):
         self.base_dir = st.secrets["base_dir"]
         self.text_input = '\n'+text_input
         self.kamus_alay1_dir = self.base_dir+'input/colloquial-indonesian-lexicon1.csv'
