@@ -2,32 +2,26 @@ import streamlit as st
 from templates.contribute_page import contribute_page
 from templates.translate_page import translate_page
 
-def main():
-    # Memanggil fungsi show_loading() sebelum konten dimuat
+st.set_page_config(page_title='Kaili Dev',
+    page_icon=f'{st.secrets["base_dir"]}images/favicon.ico')    
 
-    # Konten Streamlit Anda
-    st.set_page_config(page_title='Kaili Dev',
-        page_icon=f'{st.secrets["base_dir"]}images/favicon.ico')    
+hide_st = """
+<style>
+footer {visibility:hidden;}
+#bui1 ul[role="option"]:last-child {
+    display: none;
+}
+"""
+st.markdown(hide_st,unsafe_allow_html=True)
 
-    hide_st = """
-    <style>
-    footer {visibility:hidden;}
-    #bui1 ul[role="option"]:last-child {
-        display: none;
-    }
-    """
-    st.markdown(hide_st,unsafe_allow_html=True)
+# Create sidebar menu
+menu = ["Translate", "Contribute"]
+choice = st.sidebar.selectbox("Select a page", menu)
 
-    # Create sidebar menu
-    menu = ["Translate", "Contribute"]
-    choice = st.sidebar.selectbox("Select a page", menu)
+if choice == "Translate":
+    translate_page()
+elif choice == "Contribute":
+    contribute_page()
 
-    if choice == "Translate":
-        translate_page()
-    elif choice == "Contribute":
-        contribute_page()
-
-if __name__ == '__main__':
-    main()
 
 

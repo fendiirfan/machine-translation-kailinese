@@ -6,13 +6,15 @@ from src.evaluate import evaluate
 import uuid
 from src.forward_fn import forward_generation
 from transformers import AutoModelForSeq2SeqLM
-import streamlit as st    
+import streamlit as st  
+import re
+
 
 
 class Predict:
-    def __init__(self, text_input, lang_src):
+    def __init__(self, text_input):
         self.base_dir = st.secrets["base_dir"]
-        self.text_input = text_input
+        self.text_input = '\n'+text_input
         self.kamus_alay1_dir = self.base_dir+'input/colloquial-indonesian-lexicon1.csv'
         self.kamus_alay2_dir = self.base_dir+'input/colloquial-indonesian-lexicon2.csv'
         
@@ -20,8 +22,7 @@ class Predict:
         self.model_type = 'indo-bart'
         self.max_seq_len = 512
         self.min_count_word = 3
-        self.max_count_word = 40
-
+        self.max_count_word = 30
         if lang_src=='Indonesian':
             self.swap_source_target = True
             self.model_dir = self.base_dir+'model/indo_ke_kaili'
@@ -36,7 +37,17 @@ class Predict:
         kamus_alay2 = pd.read_csv(self.kamus_alay2_dir)
 
         self.text_input = self.text_input.replace("\n", ". ").replace("-", " ")
+        emoji_pattern = re.compile("["
+                    u"\U0001F600-\U0001F64F"  # emotikon wajah umum
+                    u"\U0001F300-\U0001F5FF"  # emotikon simbol & transportasi
+                    u"\U0001F680-\U0001F6FF"  # emotikon transportasi & simbol industri
+                    u"\U0001F1E0-\U0001F1FF"  # emotikon bendera negara
+                    u"\U00002702-\U000027B0"  # emotikon simbol
+                    u"\U000024C2-\U0001F251"  # emotikon telepon & horloge
+                    "]+", flags=re.UNICODE)
+        self.text_input = emoji_pattern.sub('.', self.text_input)
         splited_text = self.text_input.split(' ')
+
         word_temp = []
         # Iterate over each word in the text
         for word in splited_text:
@@ -84,8 +95,8 @@ class Predict:
 
         test_batch_size = 1
 
-        source_lang = "[indonesian]"
-        target_lang = "[sundanese]"
+        source_lang = st.secrets['source_lang']
+        target_lang = st.secrets['target_lang']
 
         src_lid = self.tokenizer.special_tokens_to_ids[source_lang]
         tgt_lid = self.tokenizer.special_tokens_to_ids[target_lang]
@@ -121,4 +132,3 @@ class Predict:
             
             
             return test_hyp[0]        
-

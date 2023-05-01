@@ -34,9 +34,15 @@ setup_init: download_model setup_cache
 start:
 	sudo nohup sudo streamlit run app.py --server.port 8501 &
 	sudo nohup uvicorn main:app --port 8186 --reload &
+start_be:
+	sudo nohup uvicorn main:app --port 8186 --reload &
+start_fe:
+	sudo nohup sudo streamlit run app.py --server.port 8501 &
 stop:
 	sudo pkill -f "streamlit run app.py --server.port 8501"
-	sudo pkill -f "uvicorn main:app --port 8186"
+	sudo kill $(sudo lsof -t -i:8186)
+
+restart: stop start
 
 make gitpush:
 	sudo mv /home/fendiirfan/machine-trainslation-kaili/model /home/fendiirfan

@@ -16,7 +16,7 @@ def translate_send_request(user_input: str, lang_src: str):
 def contribute_send_request(indonesian_user_input: str, kailinese_user_input: str):
     URL_API = st.secrets["URL_API"]
 
-    response = requests.post(f"{URL_API}/contribute?indonesian_user_input={indonesian_user_input}&kailinese_user_input={kailinese_user_input}")
+    response = requests.post(f"{URL_API}/contribute?indonesian_user_input={indonesian_user_input}&kailinese_user_input={kailinese_user_input}", timeout=15)
     
     if response.status_code == 200:
         response_json = response.json()
