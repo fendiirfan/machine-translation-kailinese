@@ -9,7 +9,7 @@ def check_api_status():
         URL_API = st.secrets['URL_API']
         lang_src = 'Indonesian'
 
-        response = requests.post(f"{URL_API}/translate?user_input={user_input}&lang_src={lang_src}", timeout=100)
+        response = requests.post(f"{URL_API}/translate?user_input={user_input}&lang_src={lang_src}", timeout=60)
         if response.status_code == 200:
             print('API is up and running.')
         else:

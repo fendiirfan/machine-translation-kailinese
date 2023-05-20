@@ -22,4 +22,4 @@ def contribute_page():
             st.warning('Indonesian sentence or Kailinese sentence input can not be empty', icon="⚠️")
         else:
             with st.spinner('Sending to Database...'):
-                st.success(contribute_send_request(indonesian_contribute_input, kailinese_contribute_input), icon="✅")
+                st.success(contribute_send_request(indonesian_contribute_input, kailinese_contribute_input))
