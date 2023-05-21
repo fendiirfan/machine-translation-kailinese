@@ -46,8 +46,8 @@ stop:
 restart: stop start
 
 make gitpush:
-	sudo mv /home/fendiirfan/machine-trainslation-kaili/model /home/fendiirfan
+	sudo mv /home/fendiirfan/machine-translation-kailinese/model /home/fendiirfan
 	sudo git add .
 	sudo git commit -m "updating"
 	sudo git push
-	sudo mv /home/fendiirfan/model /home/fendiirfan/machine-trainslation-kaili
+	sudo mv /home/fendiirfan/model /home/fendiirfan/machine-translation-kailinese

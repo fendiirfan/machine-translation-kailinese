@@ -12,5 +12,5 @@ response = requests.post(f"{URL_API}/translate?user_input={user_input}&lang_src=
 
 print(response)
 
-# model = AutoModelForSeq2SeqLM.from_pretrained('/home/fendiirfan/machine-trainslation-kaili/model/kaili_ke_indo')
+# model = AutoModelForSeq2SeqLM.from_pretrained('/home/fendiirfan/machine-translation-kailinese/model/kaili_ke_indo')
 # print(model)

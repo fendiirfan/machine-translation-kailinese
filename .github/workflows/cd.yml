@@ -12,6 +12,6 @@ jobs:
     - name: Update VM
     run: |
         echo "================== STARTING UPDATE =================="
-        cd ~/machine-trainslation-kaili/
+        cd ~/machine-translation-kailinese/
         git pull origin master
         echo "================== FINISH =================="

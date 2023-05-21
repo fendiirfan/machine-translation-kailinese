@@ -1,1 +1,1 @@
-# machine-trainslation-kaili
+# machine-translation-kailinese
