@@ -31,6 +31,7 @@ install:
 
 setup_init: download_model setup_cache
 
+
 start:
 	sudo nohup sudo streamlit run app.py --server.port 8501 &
 	sudo nohup uvicorn main:app --port 8186 --reload &
