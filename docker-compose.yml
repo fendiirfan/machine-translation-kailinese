@@ -7,8 +7,4 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "8502:8502"
-    healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8502/_stcore/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+    restart: always

@@ -8,7 +8,10 @@ st.set_page_config(page_title='Kaili Dev',
 hide_st = """
 <style>
 footer {visibility:hidden;}
-#bui1 ul[role="option"]:last-child {
+ul[role="option"]:last-child,
+ul[role="option"]:nth-last-child(2),
+ul[role="option"]:nth-last-child(3),
+ul[role="option"]:nth-last-child(4) {
     display: none;
 }
 """
